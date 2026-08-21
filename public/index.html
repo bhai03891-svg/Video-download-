@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Video Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 Social Media Video Downloader</h1>
+            <p>Download videos from TikTok, Instagram, YouTube, Facebook & Snapchat</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="platform-selector">
+                    <label>Choose Platform:</label>
+                    <select id="platform">
+                        <option value="">-- Select Platform --</option>
+                        <option value="tiktok">🎵 TikTok</option>
+                        <option value="instagram">📸 Instagram</option>
+                        <option value="youtube">🎬 YouTube</option>
+                        <option value="facebook">👍 Facebook</option>
+                        <option value="snapchat">😊 Snapchat</option>
+                    </select>
+                </div>
+
+                <div class="url-input-group">
+                    <input 
+                        type="text" 
+                        id="videoUrl" 
+                        placeholder="Paste video URL here..." 
+                        class="url-input"
+                    >
+                    <button id="downloadBtn" class="btn-download">Download Video</button>
+                </div>
+
+                <div class="quality-selector">
+                    <label>Video Quality (YouTube):</label>
+                    <select id="quality">
+                        <option value="720">720p (Recommended)</option>
+                        <option value="480">480p</option>
+                        <option value="360">360p</option>
+                        <option value="1080">1080p (High)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="loading" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processing your video...</p>
+            </div>
+
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+            <div id="successMessage" class="success-message" style="display: none;">
+                <div class="result-box">
+                    <h3>✅ Download Ready!</h3>
+                    <img id="thumbnail" src="" alt="Video thumbnail" style="display: none;">
+                    <p id="videoTitle"></p>
+                    <p id="videoInfo"></p>
+                    <a id="downloadLink" href="#" download class="btn-primary">Download Video</a>
+                    <button id="copyLink" class="btn-secondary">Copy Link</button>
+                </div>
+            </div>
+
+            <div class="recent-downloads">
+                <h3>📥 Recent Downloads</h3>
+                <div id="downloadsList" class="downloads-list">
+                    <p>No downloads yet</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>⚠️ Always respect copyright and terms of service of each platform</p>
+            <p>&copy; 2026 Social Media Video Downloader | Developed by bhai03891-svg</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
